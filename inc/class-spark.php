@@ -51,6 +51,17 @@ class Spark {
 
 		Spark_Layouts::get_instance();
 
+		add_action( 'init', array( $this, 'localize' ) );
+
+	}
+
+	/**
+	 * Add plugin localization.
+	 */
+	public function localize() {
+
+		load_plugin_textdomain( 'spark' );
+
 	}
 
 }
