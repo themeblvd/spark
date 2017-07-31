@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <layout>
 	<info>
-		<name>Spark: About 01</name>
-		<id>spark-about-01</id>
+		<name>Spark Layout: About 01</name>
+		<id>about-01</id>
 	</info>
 	<data>
 		<meta>

@@ -48,7 +48,7 @@ class Spark_Layouts {
 	 */
 	private function __construct() {
 
-		// add_filter( 'themeblvd_core_layouts', array( $this, 'remove' ) );
+		add_filter( 'themeblvd_core_layouts', array( $this, 'remove' ) );
 
 		add_filter( 'themeblvd_sample_layouts', array( $this, 'add' ) );
 
@@ -89,8 +89,19 @@ class Spark_Layouts {
 		 * @var array
 		 */
 		$add = apply_filters( 'spark_sample_layout_index', array(
-			'about-01' => __( 'Spark: About 01', 'spark' ),
-			// @TODO Continue to add sample layouts here.
+			'about-01' 				=> __( 'Spark Layout: About 01', 'spark' ),
+			'about-02' 				=> __( 'Spark Layout: About 02', 'spark' ),
+			'about-03' 				=> __( 'Spark Layout: About 03', 'spark' ),
+			'about-04' 				=> __( 'Spark Layout: About 04', 'spark' ),
+			'about-05' 				=> __( 'Spark Layout: About 05', 'spark' ),
+			'careers-01' 			=> __( 'Spark Layout: Careers 01', 'spark' ),
+			'section-icon-boxes' 	=> __( 'Spark Section: 3x2 Icon Box Set', 'spark' ),
+			'section-icon-boxes-2' 	=> __( 'Spark Section: 4x2 Centered Icon Box Set', 'spark' ),
+			'section-logos-boxed' 	=> __( 'Spark Section: Logos Boxed', 'spark' ),
+			'section-logos-open' 	=> __( 'Spark Section: Logos Open', 'spark' ),
+			'section-mag-blurb' 	=> __( 'Spark Section: Magazine 3-Column Blurb', 'spark' ),
+			'section-team' 			=> __( 'Spark Section: Team Members', 'spark' ),
+			'section-team-2' 		=> __( 'Spark Section: Team Members Stretch', 'spark' ),
 		));
 
 		$layouts = array();
