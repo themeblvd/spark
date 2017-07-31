@@ -38,9 +38,31 @@ define( 'SPARK_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
  */
 function spark_init() {
 
+	/**
+	 * Is the the Jump Start theme running?
+	 */
+	if ( ! defined( 'TB_THEME_ID' ) || TB_THEME_ID !== 'jumpstart' ) {
+
+		return;
+
+	}
+
+	/**
+	 * And are we using a compatible version of the
+	 * Jump Start theme?
+	 */
+	if ( ! defined( 'TB_FRAMEWORK_VERSION' ) || version_compare( TB_FRAMEWORK_VERSION, '<', '2.6.0' ) ) {
+
+		return;
+
+	}
+
+	/**
+	 * Proceed. Run the Spark plugin.
+	 */
 	include_once( SPARK_PLUGIN_DIR . '/inc/class-spark.php' );
 
 	Spark::get_instance();
 
 }
-spark_init();
+add_action( 'after_setup_theme', 'spark_init' );
